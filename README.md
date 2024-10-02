@@ -4,7 +4,7 @@ This is super awesome great software engineering module at UCL
 
 I hope you all enjoy the fantastic software engineering techniques.
 
-I want to change this line in the main branch
+Don't fight to each other. Let's peacefully resolve it!
 
 I added this line in the testing branch.
 
