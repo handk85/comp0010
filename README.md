@@ -7,3 +7,5 @@ I hope you all enjoy the fantastic software engineering techniques.
 And so on...
 
 I added this line in the testing branch.
+
+This is another line added in the testing branch.
