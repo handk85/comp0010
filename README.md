@@ -9,3 +9,5 @@ Don't fight to each other. Let's peacefully resolve it!
 I added this line in the testing branch.
 
 This is another line added in the testing branch.
+
+Commit from the Awesome Guy
