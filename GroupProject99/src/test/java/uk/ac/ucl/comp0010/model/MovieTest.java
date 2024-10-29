@@ -25,14 +25,14 @@ public class MovieTest {
     rate.setScore(3);
     movie.addRate(new Rate(3));
     assertEquals(MOVIE_TITLE, movie.getTitle());
-    assertEquals(4.0, movie.getAverageRate());
+    assertEquals(4.0, movie.computeAverageRate());
     assertEquals(2, movie.getRates().size());
   }
 
   @Test
   void getAverageRateTestWithEmptyRates() {
     assertThrows(EmptyRateException.class, () -> {
-      movie.getAverageRate();
+      movie.computeAverageRate();
     });
   }
 }
