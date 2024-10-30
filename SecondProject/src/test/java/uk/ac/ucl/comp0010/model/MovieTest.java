@@ -10,8 +10,12 @@ public class MovieTest {
   @Test
   void getAverageRateTest() throws EmptyRateException {
     Movie movie = new Movie();
-    movie.addRate(5);
-    movie.addRate(3);
+
+    Rate rate = new Rate();
+    rate.setScore(3);
+
+    movie.addRate(new Rate(5));
+    movie.addRate(rate);
     assertEquals(4.0, movie.getAverageRate());
   }
 

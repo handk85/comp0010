@@ -10,10 +10,10 @@ import uk.ac.ucl.comp0010.exception.EmptyRateException;
  */
 public class Movie {
 
-  List<Integer> rates;
+  List<Rate> rates;
 
   public Movie() {
-    this.rates = new ArrayList<Integer>();
+    this.rates = new ArrayList<Rate>();
   }
 
   /**
@@ -28,13 +28,13 @@ public class Movie {
     }
 
     Double sum = 0.0;
-    for (Integer rate : rates) {
-      sum += rate;
+    for (Rate rate : rates) {
+      sum += rate.getScore();
     }
     return sum / rates.size();
   }
 
-  public void addRate(int rate) {
+  public void addRate(Rate rate) {
     this.rates.add(rate);
 
   }
