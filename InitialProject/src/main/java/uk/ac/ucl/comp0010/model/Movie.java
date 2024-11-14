@@ -3,6 +3,7 @@ package uk.ac.ucl.comp0010.model;
 import java.util.ArrayList;
 import java.util.List;
 import uk.ac.ucl.comp0010.exception.EmptyRateException;
+import uk.ac.ucl.comp0010.state.MovieState;
 
 
 /**
@@ -12,8 +13,14 @@ public class Movie {
 
   List<Rate> rates;
 
+  ObserverManager observerManager;
+
+  MovieState state;
+
   public Movie() {
     this.rates = new ArrayList<Rate>();
+
+    this.observerManager = ObserverManager.getInstance();
   }
 
   /**
@@ -36,7 +43,15 @@ public class Movie {
 
   public void addRate(Rate rate) {
     this.rates.add(rate);
+    observerManager.notify("A new rate has been added " + String.valueOf(rate.score));
+  }
 
+  public MovieState getState() {
+    return state;
+  }
+
+  public void setState(MovieState state) {
+    this.state = state;
   }
 
 }
